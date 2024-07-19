@@ -38,18 +38,19 @@ y_pred = rfc.predict(x_test)
 score = accuracy_score(y_pred, y_test)
 st.write('Accuracy score for this model is {}'.format(score))
 
-rf_pickle = open('hospread_random_forest.pickle', 'wb')
+"""rf_pickle = open('hospread_random_forest.pickle', 'wb')
 pickle.dump(rfc, rf_pickle)
 rf_pickle.close()
 
 
-#load model and test
+load model and test
 filename = 'hospread_random_forest.pickle'
 loaded_model = pickle.load(open(filename, 'rb'))
 st.write(loaded_model) 
 result= loaded_model.predict(x_test[0:1000])
 
 st.write(result)
+"""
 
 
 
