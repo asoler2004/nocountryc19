@@ -169,7 +169,7 @@ with tab1:
 
   image_url='https://github.com/asoler2004/HospRead/raw/main/LogoHospRead.jpg'
   #image_url='https://github.com/No-Country-simulation/c19-109-m-data-bi/raw/main/Images/Logo_HospRead.jpg'
-  response = requests.get(image_url)
+  response = requests.get(image_url, timeout=60)
 
   # Check if the request was successful
   if response.status_code == 200:
@@ -184,7 +184,7 @@ with tab4:
   #path='https://github.com/No-Country-simulation/c19-109-m-data-bi/raw/main/ML_training/hospread_logistic_regression.pkl'
   #path='https://github.com/asoler2004/nocountryc19/raw/main/hospread_logistic_regression.pickle'
   path='https://github.com/asoler2004/nocountryc19/raw/main/hospread_logistic_regression.pkl'
-  response = requests.get(path)
+  response = requests.get(path, timeout=60)
 
   # Check if the request was successful
   if response.status_code == 200:
